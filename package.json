@@ -1,0 +1,24 @@
+{
+  "name": "orbit-add-activities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brob/orbit-add-activities.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brob/orbit-add-activities/issues"
+  },
+  "homepage": "https://github.com/brob/orbit-add-activities#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^2.6.7"
+  }
+}

@@ -8,5 +8,21 @@
 </head>
 <body>
     <h1>Hi</h1>
+    <form action="/.netlify/functions/addActivity" method="post">
+        <label>Email<br>
+            <input type="text" name="email">
+        </label><br>
+        <label for="date">
+            Date<br>
+            <input type="date" name="date">
+        </label>
+        <label>Activity Type<br>
+            <input type="text" name="activityType">
+        </label><br>
+        <label>Activity Properties<br>
+            <input type="text" name="activityProperties">
+        </label><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
