@@ -54,7 +54,7 @@ const handler = async (event) => {
       } 
     })
     console.log(fetchBodies)
-    Promise.all(fetchBodies.map(body => {
+    const responses = await Promise.all(fetchBodies.map(body => {
       return fetch(url, {
         method: 'POST',
         headers: {
@@ -64,13 +64,11 @@ const handler = async (event) => {
         body: JSON.stringify(body)
       })
     })
-    ).then(responses => {
-      console.log(responses);
-    })
-
+    )
+    console.log(responses)
     return {
       statusCode: 200,
-      body: JSON.stringify({message: "totally worked", fetchBodies}),
+      body: JSON.stringify({message: "totally worked", responses}),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
