@@ -32,8 +32,7 @@ const handler = async (event) => {
     const subject = event.queryStringParameters.name || 'World'
     console.log(event)
     // get post body
-    const params = parseParams(event.body);
-    const {email,date, activityType, activityProperties} = params;
+    const {email,date, activityType, activityProperties} = event.body;
     const emailArray = email.split(',');
     const propArray = activityProperties.split(',');
     const propTuples = propArray.map(propString =>  propString.split(':').map(value => value.trim()));
