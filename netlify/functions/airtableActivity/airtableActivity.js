@@ -70,7 +70,7 @@ const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: "totally worked",
+      body: JSON.stringify({message: "totally worked", fetchBodies}),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
